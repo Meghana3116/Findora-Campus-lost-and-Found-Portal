@@ -1,15 +1,21 @@
 # Findora – Campus Lost-and-Found Portal
 
-Findora is a full-stack MERN application designed to help students report, discover, and recover lost and found items within a campus. It provides a simple platform where students can report missing belongings, upload item images, submit claim requests, and track their claims. Administrators can manage items and approve or reject claims.
+Findora is a full-stack MERN application designed to help students report, discover, and recover lost and found items within a campus. It provides a centralized platform where students can report missing belongings, upload item images, submit claim requests, and track their claims. Administrators can manage reported items and approve or reject claim requests.
 
-## Features
+## 🌐 Live Application
+
+- **Frontend:** [Findora – Live Website](https://findora-campus-lost-and-found-portal-1.onrender.com)
+- **Backend API:** [Findora Backend](https://findora-campus-lost-and-found-portal.onrender.com)
+- **Backend Health Check:** [Check Backend Status](https://findora-campus-lost-and-found-portal.onrender.com/)
+
+## ✨ Features
 
 ### Student Features
 - Student registration and login.
 - Browse lost and found items.
 - Report lost and found items.
 - Upload item images.
-- View item details.
+- View detailed item information.
 - Submit claim requests with proof.
 - Track personal claim requests.
 - Edit and manage reported items.
@@ -17,7 +23,7 @@ Findora is a full-stack MERN application designed to help students report, disco
 ### Admin Features
 - Admin login and protected dashboard.
 - View all claim requests.
-- Approve or reject claims.
+- Approve or reject claim requests.
 - Manage reported items.
 - Filter and refresh claim requests.
 
@@ -28,19 +34,25 @@ Findora is a full-stack MERN application designed to help students report, disco
 - Responsive user interface.
 - REST API integration.
 - Image upload functionality.
+- Password hashing using bcryptjs.
 
-## Technology Stack
+## 🛠️ Technology Stack
 
-- **Frontend:** React.js, CSS
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB Atlas, Mongoose
-- **Authentication:** JSON Web Token (JWT)
-- **Password Security:** bcryptjs
-- **Image Upload:** Multer
-- **Deployment:** Render
-- **Version Control:** Git and GitHub
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend development |
+| CSS | Styling and responsive design |
+| Node.js | Backend runtime |
+| Express.js | Backend API development |
+| MongoDB Atlas | Cloud database |
+| Mongoose | Database modeling |
+| JWT | User authentication |
+| bcryptjs | Password hashing |
+| Multer | Image uploads |
+| Render | Application deployment |
+| Git & GitHub | Version control |
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 Findora/
@@ -67,28 +79,34 @@ Findora/
 └── README.md
 ```
 
-## Installation and Setup
+## ⚙️ Installation and Setup
 
 ### Prerequisites
-- Node.js
+
+- Node.js (20 or newer recommended)
 - npm
 - MongoDB Atlas account
+- Git
 
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Meghana3116/Findora-Campus-lost-and-Found-Portal
 cd Findora
 ```
 
+Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
+
 ### 2. Backend Setup
+
+Open the first terminal:
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside the backend folder:
+Create a `.env` file inside the `backend` folder:
 
 ```env
 PORT=5000
@@ -96,9 +114,23 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secure_secret
 ```
 
+Configure your MongoDB Atlas connection string and a strong JWT secret.
+
+**Important:** Never upload your `.env` file or share your database credentials.
+
+Start the backend:
+
+```bash
+node server.js
+```
+
+The backend runs at:
+
+`http://localhost:5000`
+
 ### 3. Frontend Setup
 
-Open another terminal:
+Open a second terminal from the project root:
 
 ```bash
 cd frontend
@@ -106,76 +138,94 @@ npm install
 npm run dev
 ```
 
-### 4. Start the Backend
+The frontend runs at:
 
-From the backend folder:
+`http://localhost:5173`
 
-```bash
-node server.js
-```
+### 4. Access the Application Locally
 
-### 5. Access the Application
+Open the frontend URL in your browser:
 
-- Frontend: http://localhost:5173
-- Backend: http://localhost:5000
+`http://localhost:5173`
 
-## API Endpoints
+Make sure both frontend and backend servers are running.
+
+## 🔗 API Endpoints
 
 ### User Authentication
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/users/register` | Register a student |
-| POST | `/api/users/login` | Login |
+| POST | `/api/users/register` | Register a new student |
+| POST | `/api/users/login` | User login |
 
-### Items
+### Item Management
 
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | `/api/items` | Get all items |
+| GET | `/api/items` | Get all reported items |
 | GET | `/api/items/:id` | Get item details |
-| POST | `/api/items` | Report an item |
+| POST | `/api/items` | Report a new item |
 | PUT | `/api/items/:id` | Update an item |
 | DELETE | `/api/items/:id` | Delete an item |
 
-### Claims
+### Claim Management
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/claims` | Submit a claim |
+| POST | `/api/claims` | Submit a claim request |
 | GET | `/api/claims` | View all claims (Admin) |
 | GET | `/api/claims/myclaims` | View personal claims |
 | PUT | `/api/claims/:id` | Approve or reject a claim (Admin) |
 
-Protected endpoints require JWT authentication.
+**Authentication:** Protected endpoints require a valid JWT Bearer token. Admin endpoints also require administrator authorization.
 
-## Deployment
+## 🚀 Deployment
 
-- **Backend:** Render Web Service
-- **Frontend:** Render Static Site
-- **Database:** MongoDB Atlas
+Findora is deployed using the following services:
 
-## How It Works
+- **Frontend Hosting:** Render Static Site
+- **Backend Hosting:** Render Web Service
+- **Database Hosting:** MongoDB Atlas
+- **Source Code:** GitHub
 
-1. Students register and log in.
+### Production URLs
+
+- Frontend: https://findora-campus-lost-and-found-portal-1.onrender.com
+- Backend: https://findora-campus-lost-and-found-portal.onrender.com
+
+## 🔄 How It Works
+
+1. Students register and log in to the application.
 2. Students report lost or found belongings.
-3. Other students browse available items.
-4. A student submits a claim request with proof.
-5. The administrator reviews the request.
+3. Other students browse the available items.
+4. A student submits a claim request with supporting proof.
+5. The administrator reviews the submitted request.
 6. The administrator approves or rejects the claim.
-7. When approved, the item's status changes to `claimed`.
+7. When a claim is approved, the item's status automatically changes to `claimed`.
 
-## Future Enhancements
+## 🔮 Future Enhancements
 
 - Email notifications for claim updates.
-- Persistent cloud image storage.
+- Persistent cloud-based image storage.
 - Advanced search and filtering.
-- Campus-specific user verification.
+- Campus-specific student verification.
+- Improved item recommendation features.
 
-## Project Purpose
+## 🎯 Project Purpose
 
-Findora aims to simplify the lost-and-found process in educational institutions by providing a centralized, accessible, and user-friendly digital platform.
+Findora aims to simplify the lost-and-found process in educational institutions by providing a centralized, accessible, and user-friendly digital platform. It helps students reconnect with their belongings while making claim management easier for campus administrators.
 
-## License
+## 👩‍💻 Project Information
 
-This project is developed for educational purposes.
+**Project Name:** Findora – Campus Lost-and-Found Portal
+
+**Project Type:** Full-Stack MERN Stack Web Application
+
+**Domain:** Web Development
+
+**Purpose:** Academic and educational project.
+
+## 📄 License
+
+This project is developed for educational and demonstration purposes.
