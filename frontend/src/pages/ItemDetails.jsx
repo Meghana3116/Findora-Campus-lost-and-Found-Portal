@@ -66,7 +66,7 @@ function ItemDetails() {
   const imageUrl = item.image
     ? item.image.startsWith("http")
       ? item.image
-      : `http://localhost:5000${item.image}`
+      : `https://findora-campus-lost-and-found-portal.onrender.com${item.image}`
     : "";
 
   return (
