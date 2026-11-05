@@ -92,10 +92,8 @@ Findora/
 
 ```bash
 git clone https://github.com/Meghana3116/Findora-Campus-lost-and-Found-Portal
-cd Findora
+cd Findora-Campus-lost-and-Found-Portal
 ```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
 
 ### 2. Backend Setup
 
