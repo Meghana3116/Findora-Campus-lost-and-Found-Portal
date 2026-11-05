@@ -20,9 +20,9 @@ function ItemCard({ item }) {
   const imageUrl = item.image
     ? item.image.startsWith("http")
       ? item.image
-      : `http://localhost:5000${item.image}`
+      : `https://findora-campus-lost-and-found-portal.onrender.com${item.image}`
     : "";
-
+  
   function handleViewDetails() {
     navigate("/item-details", {
       state: { item: item }
