@@ -1,7 +1,8 @@
+
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: "https://findora-campus-lost-and-found-portal.onrender.com/api"
 });
 
 export default API;
