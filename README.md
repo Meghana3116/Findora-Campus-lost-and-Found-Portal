@@ -6,7 +6,6 @@ Findora is a full-stack MERN application designed to help students report, disco
 
 - **Frontend:** [Findora – Live Website](https://findora-campus-lost-and-found-portal-1.onrender.com)
 - **Backend API:** [Findora Backend](https://findora-campus-lost-and-found-portal.onrender.com)
-- **Backend Health Check:** [Check Backend Status](https://findora-campus-lost-and-found-portal.onrender.com/)
 
 ## ✨ Features
 
