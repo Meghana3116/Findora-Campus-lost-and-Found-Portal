@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Navbar from "../components/Navbar";
 import ItemCard from "../components/ItemCard";
-import SearchBar from "../components/Searchbar";
+import SearchBar from "../components/SearchBar";
 import API from "../services/api";
 
 function Dashboard() {
